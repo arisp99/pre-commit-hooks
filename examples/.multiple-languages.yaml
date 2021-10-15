@@ -1,0 +1,33 @@
+repos:
+  # Style python code
+  - repo: https://github.com/psf/black
+    rev: 21.9b0
+    hooks:
+      - id: black-jupyter
+        language_version: python3
+
+  # Lint python code
+  - repo: https://gitlab.com/pycqa/flake8
+    rev: 4.0.1
+    hooks:
+      - id: flake8
+
+  # Style bash code
+  - repo: https://github.com/lovesegfault/beautysh
+    rev: v6.2.1
+    hooks:
+      - id: beautysh
+
+  # Style markdown and yaml
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v2.4.1
+    hooks:
+      - id: prettier
+        types_or: [yaml, markdown]
+
+  # Add newline to end of file and trim trailing whitespace
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
