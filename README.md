@@ -13,7 +13,7 @@ then point the user to some resources on pre-commit hooks.
 
 You can install pre-commit using pip or homebrew:
 
-```bash
+```shell
 pip install pre-commit
 brew install pre-commit
 ```
@@ -21,7 +21,7 @@ brew install pre-commit
 After installing, you must create a config file within your project which
 pre-commit will then use to generate the pre-commit scripts:
 
-```bash
+```shell
 touch .pre-commit-config.yaml
 ```
 
@@ -29,23 +29,39 @@ touch .pre-commit-config.yaml
 
 In your config file, you can specify the hooks you would like to use in your project.
 
-### Using Hooks
+### Install Hooks
 
 To compile your hooks from the config file, you can use:
 
-```bash
+```shell
 pre-commit install
+```
+
+### Run Hooks
+
+To run your hooks on (a) specific file(s), you can use:
+
+```shell
+pre-commit run --files README.md
 ```
 
 To run your hooks on all files without committing, you can use:
 
-```bash
+```shell
  pre-commit run --all-files
 ```
 
 When you commit, your hooks will be automatically triggered.
 
 ### Congrats, you are all set up to use pre-commit hooks :tada:!
+
+## Advanced Features
+
+You can automatically update the versions of the hooks you use using:
+
+```shell
+pre-commit autoupdate
+```
 
 ## Resources
 
