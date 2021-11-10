@@ -11,21 +11,21 @@ repos:
       - id: spell-check
         exclude: >
           (?x)^(
-          data/.*|
-          (.*/|)\.Rprofile|
-          (.*/|)\.Renviron|
-          (.*/|)\.gitignore|
-          (.*/|)NAMESPACE|
-          (.*/|)WORDLIST|
-          (.*/|)\.Rbuildignore|
-          (.*/|)\.pre-commit-.*|
           .*\.[rR]|
-          .*\.Rproj|
+          .*\.png|
+          .*\.RData|
           .*\.rds|
           .*\.Rds|
-          .*\.RData
-          .*\.png
-          .*\.svg
+          .*\.Rproj|
+          .*\.svg|
+          \.gitignore|
+          \.pre-commit-.*|
+          \.Rbuildignore|
+          \.Renviron|
+          \.Rprofile|
+          data/.*|
+          NAMESPACE|
+          WORDLIST
           )$
       - id: lintr
       - id: readme-rmd-rendered
