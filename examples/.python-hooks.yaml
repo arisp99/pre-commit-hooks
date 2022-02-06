@@ -1,20 +1,20 @@
 repos:
   # Style python code
   - repo: https://github.com/psf/black
-    rev: 21.9b0
+    rev: 22.1.0
     hooks:
       - id: black-jupyter
         language_version: python3
 
   # Lint python code
   - repo: https://gitlab.com/pycqa/flake8
-    rev: 4.0.1
+    rev: 3.9.2
     hooks:
       - id: flake8
         args: ["--ignore=E203,W503", "--select=W504"]
 
   # Sort imports in python files
   - repo: https://github.com/pre-commit/mirrors-isort
-    rev: v5.9.3
+    rev: v5.10.1
     hooks:
       - id: isort
