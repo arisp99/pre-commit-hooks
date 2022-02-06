@@ -8,8 +8,8 @@ for file in examples/.*.yaml; do
   echo "Updating ${file} hooks..."
 
   cp ${file} .pre-commit-config.yaml
-	pre-commit autoupdate
-	cp .pre-commit-config.yaml ${file}
+  pre-commit autoupdate
+  cp .pre-commit-config.yaml ${file}
 done
 
 # Restore global pre-commit config
